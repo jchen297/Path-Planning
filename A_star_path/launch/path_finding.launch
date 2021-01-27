@@ -1,0 +1,7 @@
+<launch>
+	<node name="stage" pkg="stage_ros" type="stageros"
+	      args="$(find lab4)/world/playground.world"/>
+	<rosparam command="load" file="$(find lab4)/config/params.yaml"/>      
+	<node name="robot_0" pkg="lab4" type="A_path.py" output="screen" />
+
+</launch>
